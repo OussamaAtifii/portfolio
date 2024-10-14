@@ -1,0 +1,46 @@
+---
+import UserIcon from "../icons/UserIcon.astro"
+---
+
+<section>
+  <div class="flex items-center mb-7 gap-x-2">
+    <UserIcon class="size-10" />
+    <h2 class="font-medium text-2xl">About Me</h2>
+  </div>
+  <article
+    class="flex flex-col-reverse sm:flex-row gap-12 items-center justify-center"
+  >
+    <img
+      height="200"
+      width="200"
+      class="aspect-square rounded-2xl p-1 ring-1 w-64 order-1 sm:order-1"
+      src="https://via.assets.so/img.jpg?w=200&h=200&tc=blue&bg=#cecece&t=Oussama"
+      alt="Imagen de Oussama Atifi"
+    />
+    <div
+      class="col-span-3 [&>p]:mb-4 [&>p]:text-pretty [&>p>span]:text-dodger-blue-600 [&>p>span]:font-semibold"
+    >
+      <p>
+        I am Oussama Atifi, a web developer with
+        <span> an interest in specializing in backend</span>, although I also
+        <span> enjoy working on frontend</span> to create complete and functional
+        applications.
+      </p>
+
+      <p>
+        I like to learn new technologies, both on the server side and the client
+        side. In backend, I enjoy creating
+        <span> well-organized solutions</span>, and in frontend, I focus on
+        developing <span> intuitive and functional interfaces</span>.
+      </p>
+
+      <p>
+        I am keen on <span> staying updated</span> in web development, exploring
+        new tools and solutions. I believe that <span>
+          continuous improvement</span
+        >
+        is essential to adapt to changes and deliver quality work.
+      </p>
+    </div>
+  </article>
+</section>

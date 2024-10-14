@@ -1,0 +1,48 @@
+---
+import ArrowUpRightIcon from "../icons/ArrowUpRightIcon.astro"
+
+interface Props {
+  title: string
+  company: string
+  companyLink: string
+  date: string
+  description: string
+}
+
+const { title, company, companyLink, date, description } = Astro.props
+---
+
+<li class="ms-4">
+  <div
+    class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white bg-dodger-blue-600"
+  >
+  </div>
+  <div class="grid sm:grid-cols-5 gap-8">
+    <div class="col-span-2 flex flex-col">
+      <h3
+        class="text-3xl font-semibold text-dodger-blue-600 text-nowrap sm:text-wrap"
+      >
+        {title}
+      </h3>
+      <a
+        href={companyLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-xl font-medium text-gray-400 hover:text-white flex items-center mb-2 group transition duration-300 hover:cursor-pointer"
+      >
+        {company}
+        <ArrowUpRightIcon
+          class="size-4 group-hover:translate-x-[2px] transition"
+        />
+      </a>
+      <time class="font-normal leading-none">{date}</time>
+    </div>
+    <div class="col-span-3">
+      <p
+        class="text-base text-pretty font-normal text-gray-500 dark:text-gray-400"
+      >
+        {description}
+      </p>
+    </div>
+  </div>
+</li>

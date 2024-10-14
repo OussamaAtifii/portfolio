@@ -1,0 +1,32 @@
+---
+import GithubIcon from "../icons/GithubIcon.astro"
+import LinkedInIcon from "../icons/LinkedInIcon.astro"
+---
+
+<!-- Navbar -->
+<div
+  id="navbar"
+  class="w-full sticky top-0 left-0 z-50 px-4 sm:px-0 bg-[#151519] transition-colors duration-300"
+>
+  <header class="flex justify-between items-center mx-auto max-w-4xl py-4">
+    <h1 class="text-2xl font-semibold text-white">oussama.dev</h1>
+    <nav class="flex">
+      <a
+        href="https://github.com/OussamaAtifii"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 text-white hover:bg-gray-800 rounded-md transition"
+      >
+        <GithubIcon class="size-6" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/oussama-atifi/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 text-white hover:bg-gray-800 rounded-md transition"
+      >
+        <LinkedInIcon class="size-6" />
+      </a>
+    </nav>
+  </header>
+</div>

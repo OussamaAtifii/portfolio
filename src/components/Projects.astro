@@ -1,0 +1,16 @@
+---
+import GitMergeIcon from "../icons/GitMergeIcon.astro"
+import ProjectItem from "./ProjectItem.astro"
+
+import { PROJECTS } from "../constants"
+---
+
+<section>
+  <div class="flex items-center mb-7 gap-x-2">
+    <GitMergeIcon class="size-10" />
+    <h2 class="font-medium text-2xl">Projects</h2>
+  </div>
+  <div class="space-y-14">
+    {PROJECTS.map((project) => <ProjectItem {...project} />)}
+  </div>
+</section>

@@ -1,0 +1,16 @@
+---
+import BriefCaseIcon from "../icons/BriefCaseIcon.astro"
+import ExperieceItem from "./ExperienceItem.astro"
+import { EXPERIENCE } from "../constants"
+---
+
+<section>
+  <div class="flex items-center mb-7 gap-x-2">
+    <BriefCaseIcon class="size-10" />
+    <h2 class="font-medium text-2xl">Experience</h2>
+  </div>
+
+  <ol class="relative border-s border-gray-200 dark:border-gray-700 space-y-10">
+    {EXPERIENCE.map((experience) => <ExperieceItem {...experience} />)}
+  </ol>
+</section>
