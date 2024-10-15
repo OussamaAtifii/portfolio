@@ -18,6 +18,31 @@ export default {
           950: "#11305a",
         },
       },
+      keyframes: {
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        glow: {
+          "0%, 100%": {
+            textShadow: "0 0 10px rgba(30,144,255, 0.75)",
+          },
+          "50%": {
+            textShadow: "0 0 20px rgba(30,144,255, 1)",
+          },
+        },
+      },
+      animation: {
+        slidein200: "slidein 0.8s cubic-bezier(0.4, 0, 0.2, 1) 200ms",
+        slidein300: "slidein 0.8s cubic-bezier(0.4, 0, 0.2, 1) 300ms",
+        glow: "glow 1.5s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
