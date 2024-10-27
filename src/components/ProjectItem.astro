@@ -1,6 +1,6 @@
 ---
+import ArrowUpRightIcon from "../icons/ArrowUpRightIcon.astro"
 import GithubIcon from "../icons/GithubIcon.astro"
-import LinkIcon from "../icons/LinkIcon.astro"
 
 interface Props {
   title: string
@@ -18,48 +18,42 @@ interface Props {
 const { title, image, tags, description, github, link } = Astro.props
 ---
 
-<article class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-  <div class="overflow-hidden group rounded-lg">
-    <img
-      src={image}
-      alt={title}
-      class="group-hover:scale-105 transition duration-500 object-cover w-full h-full"
-    />
-  </div>
-  <div class="flex flex-col gap-4 justify-between">
-    <h3 class="text-2xl font-semibold text-pretty">{title}</h3>
-    <div class="flex flex-wrap gap-2">
-      {
-        tags.map((tag) => (
-          <span
-            class={`px-2 py-1 rounded-md text-xs sm:text-sm font-medium ${tag.class} flex items-center justify-center gap-x-1 line-clamp-1`}
-          >
-            <tag.icon class="size-4 inline-block" />
-            {tag.name}
-          </span>
-        ))
-      }
-    </div>
-    <p class="text-pretty font-normal text-gray-500 dark:text-gray-400">
-      {description}
-    </p>
-    <div class="flex flex-wrap gap-2">
+<article class="border border-gray-600 rounded-md p-4 flex flex-col gap-4">
+  <div class="flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <img src={image} class="size-8" />
       <a
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-x-2 border border-gray-500 rounded-md px-3 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800"
+        class="font-medium text-gray-300 hover:text-white flex items-center group transition duration-300 hover:cursor-pointer text-pretty"
       >
-        <GithubIcon class="size-5" /> Code
-      </a>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex items-center gap-x-2 border border-gray-500 rounded-md px-3 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800"
-      >
-        <LinkIcon class="size-5" /> Preview
+        {title}
+        <ArrowUpRightIcon
+          class="size-4 group-hover:translate-x-[2px] transition"
+        />
       </a>
     </div>
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-white rounded-md transition"
+    >
+      <GithubIcon class="size-5" />
+    </a>
+  </div>
+  <p class="text-gray-400 text-sm text-pretty">{description}</p>
+  <div class="flex flex-wrap gap-2">
+    {
+      tags.map((tag) => (
+        <span
+          class={`px-2 py-1 rounded-md text-xs font-medium ${tag.class} flex items-center justify-center gap-x-1 line-clamp-1`}
+        >
+          <tag.icon class="size-4 inline-block" />
+          {tag.name}
+        </span>
+      ))
+    }
   </div>
 </article>
