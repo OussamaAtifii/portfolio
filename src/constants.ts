@@ -4,7 +4,6 @@ import React from "./icons/React.astro"
 import NestJS from "./icons/NestJS.astro"
 import Stripe from "./icons/StripeIcon.astro"
 import NodeJS from "./icons/NodeJS.astro"
-import Shadcn from "./icons/Shadcn.astro"
 import Express from "./icons/Express.astro"
 
 export const TAGS = {
