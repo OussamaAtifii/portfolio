@@ -42,6 +42,43 @@ const { title } = Astro.props
     color-scheme: light dark;
   }
 
+  .shine-text {
+    @apply text-xl font-semibold tracking-tight;
+    background:
+      radial-gradient(
+          circle at center,
+          theme(colors.dodger-blue.100 / 85%),
+          transparent
+        ) -200% 50% / 200% 100% no-repeat,
+      theme(colors.dodger-blue.700);
+    background-clip: text;
+    color: transparent;
+    animation: shine 5s 0.5s;
+  }
+
+  .shine-latest {
+    @apply text-[10px] font-semibold tracking-tight;
+    background:
+      radial-gradient(
+          circle at center,
+          theme(colors.dodger-blue.100 / 85%),
+          transparent
+        ) -200% 50% / 200% 100% no-repeat,
+      theme(colors.dodger-blue.700);
+    background-clip: text;
+    color: transparent;
+    animation: shine 2s infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: -200% 50%;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
