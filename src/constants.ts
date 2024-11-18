@@ -69,11 +69,11 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    title: "Backend Developer",
+    title: "FullStack Developer",
     company: "Magical Analytics",
     companyLink: "https://magical.es/",
     date: "March 2024 - Present",
     description:
-      "Development of backend services to automate and synchronize data between various CRMs and the HubSpot platform, improving the productivity and efficiency of sales and marketing teams. This ensures efficient integration, optimizing customer management and internal workflow.",
+      "I develop services to enhance the HubSpot interface, automate processes, and synchronize data between various CRMs and the HubSpot platform, boosting sales team productivity and efficiency. I also have experience in creating interactive websites with WordPress using Elementor and WooCommerce.",
   },
 ]
