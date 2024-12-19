@@ -1,0 +1,10 @@
+---
+const tag = Astro.props
+---
+
+<span
+  class={`px-2 py-1 text-xs flex items-center justify-center gap-x-1 line-clamp-1 bg-gray-800 rounded-md`}
+>
+  <tag.icon class="size-3 inline-block" />
+  {tag.name}
+</span>
