@@ -5,46 +5,54 @@ import NestJS from "./icons/NestJS.astro"
 import Stripe from "./icons/StripeIcon.astro"
 import NodeJS from "./icons/NodeJS.astro"
 import Express from "./icons/Express.astro"
+import AngularIcon from "./icons/AngularIcon.astro"
 
 export const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
     icon: NextJS,
   },
   TAILWIND: {
     name: "Tailwind",
-    class: "bg-blue-500 text-white",
     icon: Tailwind,
   },
   REACT: {
     name: "React",
-    class: " bg-gray-700 text-white",
     icon: React,
   },
   NEST: {
     name: "NestJS",
-    class: "bg-red-500 text-white",
     icon: NestJS,
   },
   STRIPE: {
     name: "Stripe",
-    class: "bg-gray-700 text-white",
     icon: Stripe,
   },
   NODEJS: {
     name: "Node.js",
-    class: "bg-[#152920] text-white",
     icon: NodeJS,
   },
   EXPRESS: {
     name: "Express",
-    class: "bg-black text-white",
     icon: Express,
+  },
+  ANGULAR2: {
+    name: "Angular2",
+    icon: AngularIcon,
   },
 }
 
 export const PROJECTS = [
+  {
+    title: "Moviees",
+    subtitle: "Find new Movies",
+    description:
+      "A platform to explore movies, search for specific titles, access detailed information, view ratings and summaries, and discover personalized recommendations",
+    link: "https://moviees.oussamaati.dev",
+    github: "https://github.com/OussamaAtifii/moviees",
+    image: "projects/moviees.webp",
+    tags: [TAGS.ANGULAR2, TAGS.TAILWIND],
+  },
   {
     title: "BudgetBee",
     subtitle: "Finance Tracker",
@@ -75,5 +83,24 @@ export const EXPERIENCE = [
     date: "March 2024 - Present",
     description:
       "I develop services to enhance the HubSpot interface, automate processes, and synchronize data between various CRMs and the HubSpot platform, boosting sales team productivity and efficiency. I also have experience in creating interactive websites with WordPress using Elementor and WooCommerce.",
+  },
+]
+
+export const SKILLS = [
+  {
+    name: "Languages",
+    items: ["JavaScript", "TypesScript", "Java", "PHP", "SQL"],
+  },
+  {
+    name: "Frontend",
+    items: ["Angular", "React", "Astro", "Tailwind", "HTML", "CSS"],
+  },
+  {
+    name: "Backend",
+    items: ["Spring Boot", "Node.js", "Express", "Laravel"],
+  },
+  {
+    name: "Others",
+    items: ["Git", "Github", "Linux", "Docker", "RESTful APIs"],
   },
 ]
