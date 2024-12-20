@@ -1,6 +1,6 @@
 ---
-import GithubIcon from "../icons/GithubIcon.astro"
-import LinkedInIcon from "../icons/LinkedInIcon.astro"
+import GithubIcon from "@icons/GithubIcon.astro"
+import LinkedInIcon from "@icons/LinkedInIcon.astro"
 ---
 
 <!-- Navbar -->
@@ -9,13 +9,16 @@ import LinkedInIcon from "../icons/LinkedInIcon.astro"
   class="w-full sticky top-0 left-0 z-50 px-4 sm:px-0 bg-[#151519] transition-colors duration-300"
 >
   <header class="flex justify-between items-center mx-auto max-w-4xl py-4">
-    <h1 class="text-2xl font-semibold text-white">oussama.dev</h1>
-    <nav class="flex">
+    <div class="flex gap-6">
+      <h1 class="text-2xl font-medium text-white underline">Home</h1>
+      <!-- <h1 class="text-2xl font-medium text-white hover:underline">Blog</h1> -->
+    </div>
+    <nav class="flex items-center justify-center">
       <a
         href="https://github.com/OussamaAtifii"
         target="_blank"
         rel="noopener noreferrer"
-        class="p-2 text-white hover:bg-gray-800 rounded-md transition"
+        class="p-2 text-white hover:bg-gray-800 rounded-md transition flex items-center justify-center"
       >
         <GithubIcon class="size-6" />
       </a>
@@ -23,7 +26,7 @@ import LinkedInIcon from "../icons/LinkedInIcon.astro"
         href="https://www.linkedin.com/in/oussama-atifi/"
         target="_blank"
         rel="noopener noreferrer"
-        class="p-2 text-white hover:bg-gray-800 rounded-md transition"
+        class="p-2 text-white hover:bg-gray-800 rounded-md transition flex items-center justify-center"
       >
         <LinkedInIcon class="size-6" />
       </a>
