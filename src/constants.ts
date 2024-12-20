@@ -1,11 +1,11 @@
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import React from "./icons/React.astro"
-import NestJS from "./icons/NestJS.astro"
-import Stripe from "./icons/StripeIcon.astro"
-import NodeJS from "./icons/NodeJS.astro"
-import Express from "./icons/Express.astro"
-import AngularIcon from "./icons/AngularIcon.astro"
+import AngularIcon from "@icons/AngularIcon.astro"
+import Express from "@icons/Express.astro"
+import NestJS from "@icons/NestJS.astro"
+import NextJS from "@icons/NextJS.astro"
+import NodeJS from "@icons/NodeJS.astro"
+import React from "@icons/React.astro"
+import StripeIcon from "@icons/StripeIcon.astro"
+import Tailwind from "@icons/Tailwind.astro"
 
 export const TAGS = {
   NEXT: {
@@ -26,7 +26,7 @@ export const TAGS = {
   },
   STRIPE: {
     name: "Stripe",
-    icon: Stripe,
+    icon: StripeIcon,
   },
   NODEJS: {
     name: "Node.js",
