@@ -1,20 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Description from "../components/Description.astro"
-import Experience from "../components/Experience.astro"
-import Projects from "../components/Projects.astro"
-import AboutMe from "../components/AboutMe.astro"
-import Footer from "../components/Footer.astro"
+
+import Description from "@components/Description.astro"
+import Experience from "@components/experience/Experience.astro"
+import Footer from "@components/Footer.astro"
+import Projects from "@components/projects/Projects.astro"
+import Skills from "@components/Skills.astro"
 ---
 
 <Layout title="Porfolio Oussama Atifi - Desarrollador Web FullStack">
   <main
-    class="mx-auto max-w-4xl flex flex-col gap-20 sm:gap-28 min-h-screen relative py-4 [&>section]:px-4 sm:[&>section]:px-0"
+    class="mx-auto max-w-4xl flex flex-col gap-20 sm:gap-24 min-h-screen relative py-4 [&>section]:px-4 sm:[&>section]:px-0"
   >
     <Description />
     <Experience />
     <Projects />
-    <AboutMe />
+    <Skills />
     <Footer />
   </main>
 </Layout>
