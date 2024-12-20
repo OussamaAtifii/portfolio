@@ -1,5 +1,5 @@
 ---
-import ArrowUpRightIcon from "../icons/ArrowUpRightIcon.astro"
+import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro"
 
 interface Props {
   title: string
@@ -18,9 +18,9 @@ const { title, company, companyLink, date, description } = Astro.props
   >
   </div>
   <div class="grid sm:grid-cols-5 gap-8">
-    <div class="col-span-2 flex flex-col">
+    <div class="col-span-2 flex flex-col gap-2">
       <h3
-        class="text-3xl font-semibold text-dodger-blue-600 text-nowrap sm:text-wrap"
+        class="text-3xl font-semibold text-dodger-blue-700 text-nowrap sm:text-wrap leading-none"
       >
         {title}
       </h3>
@@ -28,19 +28,17 @@ const { title, company, companyLink, date, description } = Astro.props
         href={companyLink}
         target="_blank"
         rel="noopener noreferrer"
-        class="text-xl font-medium text-gray-400 hover:text-white flex items-center mb-2 group transition duration-300 hover:cursor-pointer"
+        class="text-lg font-medium text-gray-400 hover:text-white flex items-center group transition duration-300 hover:cursor-pointer"
       >
         {company}
         <ArrowUpRightIcon
           class="size-4 group-hover:translate-x-[2px] transition"
         />
       </a>
-      <time class="font-normal leading-none">{date}</time>
+      <time class="text-sm leading-none text-gray-400">{date}</time>
     </div>
     <div class="col-span-3">
-      <p
-        class="text-base text-pretty font-normal text-gray-500 dark:text-gray-400"
-      >
+      <p class="text-base text-pretty font-normal text-gray-400">
         {description}
       </p>
     </div>

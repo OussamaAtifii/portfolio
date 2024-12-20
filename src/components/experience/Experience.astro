@@ -1,7 +1,7 @@
 ---
-import BriefCaseIcon from "../icons/BriefCaseIcon.astro"
-import ExperieceItem from "./ExperienceItem.astro"
-import { EXPERIENCE } from "../constants"
+import BriefCaseIcon from "@icons/BriefCaseIcon.astro"
+import { EXPERIENCE } from "@constants"
+import ExperienceItem from "./ExperienceItem.astro"
 ---
 
 <section>
@@ -13,6 +13,6 @@ import { EXPERIENCE } from "../constants"
   <ol
     class="relative border-s border-gray-200 dark:border-gray-700 space-y-10 animate-slidein300"
   >
-    {EXPERIENCE.map((experience) => <ExperieceItem {...experience} />)}
+    {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
   </ol>
 </section>
