@@ -4,26 +4,14 @@ import ProjectItem from "./ProjectItem.astro"
 
 import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro"
 import GitMergeIcon from "@icons/GitMergeIcon.astro"
+import Container from "@components/Container.astro"
 ---
 
-<section>
-  <div class="flex justify-between items-center mb-7">
-    <div class="flex items-center gap-x-2">
-      <GitMergeIcon class="size-10" />
-      <h2 class="font-medium text-2xl">Projects</h2>
-    </div>
-    <a
-      href="https://github.com/OussamaAtifii?tab=repositories"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-sm font-medium text-gray-400 hover:text-white flex items-center group transition duration-300 hover:cursor-pointer"
-    >
-      See more
-      <ArrowUpRightIcon
-        class="size-4 group-hover:translate-x-[2px] transition"
-      />
-    </a>
-  </div>
+<Container
+  title="Projects"
+  icon={GitMergeIcon}
+  link="https://github.com/OussamaAtifii?tab=repositories"
+>
   <div class="grid sm:grid-cols-1 gap-12">
     {
       PROJECTS.map((project, index) => (
@@ -31,4 +19,4 @@ import GitMergeIcon from "@icons/GitMergeIcon.astro"
       ))
     }
   </div>
-</section>
+</Container>

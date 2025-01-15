@@ -1,23 +1,17 @@
 ---
 import { SKILLS } from "@constants"
-import GitMergeIcon from "@icons/GitMergeIcon.astro"
 import Keyboard from "@icons/Keyboard.astro"
+import Container from "./Container.astro"
 ---
 
-<section>
-  <div class="flex justify-between items-center mb-7">
-    <div class="flex items-center gap-x-2">
-      <Keyboard class="size-10" />
-      <h2 class="font-medium text-2xl">Skills</h2>
-    </div>
-  </div>
+<Container title="Skills" icon={Keyboard}>
   <div class="flex flex-col">
     <div class="flex flex-col gap-6">
       {
         SKILLS.map((skill) => (
           <div class="flex flex-col sm:flex-row">
             <p class="w-1/5 pb-2 sm:pb-0">{skill.name}</p>
-            <div class="flex gap-2 w-4/5 flex-wrap">
+            <div class="flex gap-2 sm:w-4/5 flex-wrap">
               {skill.items.map((item) => (
                 <button class="border border-gray-300 px-2 py-1 rounded-md text-sm cursor-default">
                   {item}
@@ -29,4 +23,4 @@ import Keyboard from "@icons/Keyboard.astro"
       }
     </div>
   </div>
-</section>
+</Container>

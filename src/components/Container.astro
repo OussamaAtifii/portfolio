@@ -1,0 +1,28 @@
+---
+import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro"
+
+const { icon: Icon, title, link } = Astro.props
+---
+
+<section>
+  <div class="flex justify-between items-center mb-7">
+    <div class="flex items-center gap-x-2">
+      <Icon class="size-10" />
+      <h2 class="font-medium text-2xl">{title}</h2>
+    </div>
+    {
+      link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-gray-400 hover:text-white flex items-center group transition duration-300 hover:cursor-pointer"
+        >
+          See more
+          <ArrowUpRightIcon class="size-4 group-hover:translate-x-[2px] transition duration-300" />
+        </a>
+      )
+    }
+  </div>
+  <slot />
+</section>

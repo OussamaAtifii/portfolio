@@ -2,17 +2,13 @@
 import BriefCaseIcon from "@icons/BriefCaseIcon.astro"
 import { EXPERIENCE } from "@constants"
 import ExperienceItem from "./ExperienceItem.astro"
+import Container from "@components/Container.astro"
 ---
 
-<section>
-  <div class="flex items-center mb-7 gap-x-2 animate-slidein300">
-    <BriefCaseIcon class="size-10" />
-    <h2 class="font-medium text-2xl">Experience</h2>
-  </div>
-
+<Container title="Experience" icon={BriefCaseIcon}>
   <ol
     class="relative border-s border-gray-200 dark:border-gray-700 space-y-10 animate-slidein300"
   >
     {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
   </ol>
-</section>
+</Container>
