@@ -1,10 +1,10 @@
 ---
 import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro"
 
-const { icon: Icon, title, link } = Astro.props
+const { icon: Icon, title, id, link } = Astro.props
 ---
 
-<section>
+<section id={id}>
   <div class="flex justify-between items-center mb-7">
     <div class="flex items-center gap-x-2">
       <Icon class="size-10" />
