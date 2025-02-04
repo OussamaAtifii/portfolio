@@ -1,4 +1,4 @@
 
 ## Welcome to my [Portfolio](https://www.oussamaati.dev)!👋
 
-Feel free to look around to check out my projects and get to know a little bit about me.
+Explore my projects and get to know more about me. Feel free to reach out if you'd like to connect.
