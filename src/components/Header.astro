@@ -1,5 +1,4 @@
 ---
-import Close from "@icons/Close.astro"
 import GithubIcon from "@icons/GithubIcon.astro"
 import LinkedIn from "@icons/LinkedIn.astro"
 import Mail from "@icons/Mail.astro"
@@ -16,7 +15,7 @@ import Moon from "@icons/Moon.astro"
       <!-- Logo -->
       <a
         href="/"
-        class="home-link font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2"
+        class="home-link text-lg font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2"
       >
         oussamaati.dev
       </a>
@@ -113,12 +112,60 @@ import Moon from "@icons/Moon.astro"
   const menuButton = document.getElementById("menu-button")
   const navContent = document.getElementById("nav-content")
 
+  let lastScrollY = window.scrollY
+  let ticking = false
+  const threshold = 10 // Quantity of pixels to trigger the scroll event
+  let isScrollDisabled = false // Flag to disable scroll while interacting with the menu
+  let isMenuOpen = false
+
+  const handleNavScroll = () => {
+    if (!ticking && !isScrollDisabled) {
+      // Only execute if scroll is not disabled
+      window.requestAnimationFrame(() => {
+        const navbar = document.getElementById("navbar")
+
+        // Only execute if the quantity of pixels scrolled is greater than the threshold
+        if (Math.abs(window.scrollY - lastScrollY) > threshold) {
+          if (window.scrollY > lastScrollY) {
+            navbar?.classList.add("hidden") // Hide when scrolling down
+          } else {
+            navbar?.classList.remove("hidden") // Show when scrolling up
+          }
+
+          // Update the last scroll position
+          lastScrollY = window.scrollY
+        }
+
+        ticking = false
+      })
+      ticking = true
+    }
+  }
+
   menuButton?.addEventListener("click", () => {
+    isMenuOpen = !isMenuOpen
+
+    // Disable scroll temporarily while interacting with the menu
+    isScrollDisabled = true
+
+    // Change menu visibility
     navContent?.classList.toggle("hidden")
+    document.body.classList.toggle("overflow-hidden")
+
+    // Cambia el ícono del menú dinámicamente
+    menuButton.innerHTML = isMenuOpen
+      ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.5" > <path d="M18 6l-12 12"></path> <path d="M6 6l12 12"></path></svg>'
+      : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.5"> <path d="M4 8l16 0"></path> <path d="M4 16l16 0"></path </svg>'
+
+    // Re-enable scroll
+    setTimeout(() => {
+      isScrollDisabled = false
+    }, 300)
   })
 
   const links = navContent?.querySelectorAll("a")
 
+  // Close the menu when clicking on a link
   links?.forEach((link) => {
     link.addEventListener("click", () => {
       setTimeout(() => {
@@ -126,4 +173,6 @@ import Moon from "@icons/Moon.astro"
       }, 100)
     })
   })
+
+  document.addEventListener("scroll", handleNavScroll)
 </script>
