@@ -4,21 +4,23 @@ import { CERTIFICATIONS } from "@constants"
 import Container from "./Container.astro"
 ---
 
-<Container title="Certifications" icon={Certificate}>
-  <div class="grid sm:grid-cols-1 gap-8">
+<Container title="Certifications" id="certifications" icon={Certificate}>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       CERTIFICATIONS.map(({ link, tag, name, description, date }) => (
         <a
-          class="border-2 border-gray-600 rounded-lg p-5 flex flex-col sm:flex-row items-center gap-5 transition-all duration-300 bg-[#151519] hover:border-gray-300"
           href={link}
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View certificate: ${name}`}
+          class="relative flex flex-col items-star p-6 border border-gray-700 rounded-lg bg-[#151519] shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-md duration-300"
         >
-          <tag.icon class="size-20" />
-          <div>
-            <h3 class="text-lg font-medium">{name}</h3>
-            <p class=" text-gray-400">{description}</p>
-            <p class="text-sm text-gray-400 mt-1">{date}</p>
-          </div>
+          <time class="absolute top-4 right-4 bg-gray-800 text-gray-400 text-xs px-2 py-1 rounded-md">
+            {date}
+          </time>
+          <tag.icon class="size-14 text-gray-300" />
+          <h3 class="mt-4 text-lg font-semibold text-white">{name}</h3>
+          <p class="mt-2 text-sm text-gray-400">{description}</p>
         </a>
       ))
     }
