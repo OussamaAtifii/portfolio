@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro"
 import "@fontsource-variable/rubik"
+import "@fontsource-variable/fira-code"
 
 interface Props {
   title: string
@@ -30,9 +31,12 @@ const { title } = Astro.props
 <style is:global>
   html {
     font-family: "Rubik Variable", system-ui, sans-serif;
-    background: #151519;
     scroll-behavior: smooth;
     color-scheme: light dark;
+  }
+
+  .logo-font {
+    font-family: "Fira Code Variable", monospace;
   }
 
   .bg-pattern {
@@ -56,39 +60,24 @@ const { title } = Astro.props
   }
 
   .shine-text {
-    @apply font-medium tracking-tight;
+    font-weight: 500;
+    letter-spacing: -0.5px;
     background:
-      radial-gradient(
-          circle at center,
-          theme(colors.dodger-blue.100 / 85%),
-          transparent
-        ) -200% 50% / 200% 100% no-repeat,
-      theme(colors.dodger-blue.700);
+      radial-gradient(circle at center, #50c5ff, transparent) -200% 50% / 200% 100%
+        no-repeat,
+      #0a71eb;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     animation: shine 5s 0.5s;
   }
 
-  .shine-latest {
-    @apply text-[10px] font-semibold tracking-tight;
-    background:
-      radial-gradient(
-          circle at center,
-          theme(colors.dodger-blue.100 / 85%),
-          transparent
-        ) -200% 50% / 200% 100% no-repeat,
-      theme(colors.dodger-blue.700);
-    background-clip: text;
-    color: transparent;
-    animation: shine 2s infinite;
-  }
-
   @keyframes shine {
     0% {
-      background-position: 200% 50%;
+      background-position: -200% 50%;
     }
     100% {
-      background-position: -200% 50%;
+      background-position: 200% 50%;
     }
   }
 
