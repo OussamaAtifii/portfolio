@@ -1,9 +1,9 @@
 ---
+import Close from "@icons/Close.astro"
 import GithubIcon from "@icons/GithubIcon.astro"
 import LinkedIn from "@icons/LinkedIn.astro"
 import Mail from "@icons/Mail.astro"
 import Menu from "@icons/Menu.astro"
-import Moon from "@icons/Moon.astro"
 ---
 
 <header
@@ -15,7 +15,7 @@ import Moon from "@icons/Moon.astro"
       <!-- Logo -->
       <a
         href="/"
-        class="home-link text-lg font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2"
+        class="logo-font text-lg font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2"
       >
         oussamaati.dev
       </a>
@@ -25,8 +25,8 @@ import Moon from "@icons/Moon.astro"
         id="menu-button"
         class="p-2 text-white hover:bg-gray-800 rounded-md transition-colors duration-300"
       >
-        <Menu class="size-6" />
-        <!-- <Close class="size-6" /> -->
+        <Menu class="open-menu size-6" />
+        <Close class="close-menu size-6 hidden" />
       </button>
     </div>
 
@@ -38,7 +38,7 @@ import Moon from "@icons/Moon.astro"
       <!-- Logo -->
       <a
         href="/"
-        class="hidden sm:block home-link font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2"
+        class="logo-font hidden sm:block font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2"
       >
         oussamaati.dev
       </a>
@@ -50,7 +50,7 @@ import Moon from "@icons/Moon.astro"
         >
         <a
           href="#experience"
-          class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
+          class="p-2 text-sm dark:text-white text-black w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
           >Experience</a
         >
         <a
@@ -76,14 +76,7 @@ import Moon from "@icons/Moon.astro"
           aria-label="Email"
           class="p-2 text-white hover:bg-gray-800 rounded-md transition-colors duration-300"
         >
-          <Mail class="size-6" />
-        </a>
-        <a
-          href="#"
-          aria-label="Dark Mode"
-          class="p-2 text-white hover:bg-gray-800 rounded-md transition-colors duration-300"
-        >
-          <Moon class="size-6" />
+          <Mail class="size-5" />
         </a>
         <a
           href="https://github.com/OussamaAtifii"
@@ -109,80 +102,60 @@ import Moon from "@icons/Moon.astro"
 </header>
 
 <script>
-  import OpenToWorkBadge from "./badges/OpenToWorkBadge.astro"
-
   const menuButton = document.getElementById("menu-button")
   const navContent = document.getElementById("nav-content")
 
-  let lastScrollY = window.scrollY
-  let ticking = false
-  const threshold = 10 // Quantity of pixels to trigger the scroll event
-  let isScrollDisabled = false // Flag to disable scroll while interacting with the menu
-  let isMenuOpen = false
+  const openMenu = document.querySelector(".open-menu")
+  const closeMenu = document.querySelector(".close-menu")
 
-  const handleNavScroll = () => {
-    if (!ticking && !isScrollDisabled) {
-      // Only execute if scroll is not disabled
-      window.requestAnimationFrame(() => {
-        const navbar = document.getElementById("navbar")
+  if (menuButton) {
+    menuButton.addEventListener("click", () => {
+      // Change menu visibility
+      navContent?.classList.toggle("hidden")
+      document.body.classList.toggle("overflow-hidden")
 
-        // Only execute if the quantity of pixels scrolled is greater than the threshold
-        if (Math.abs(window.scrollY - lastScrollY) > threshold) {
-          if (window.scrollY > lastScrollY) {
-            navbar?.classList.add("hidden") // Hide when scrolling down
-          } else {
-            navbar?.classList.remove("hidden") // Show when scrolling up
-          }
-
-          // Update the last scroll position
-          lastScrollY = window.scrollY
-        }
-
-        ticking = false
-      })
-      ticking = true
-    }
+      // Change menu button icon
+      openMenu?.classList.toggle("hidden")
+      closeMenu?.classList.toggle("hidden")
+    })
   }
 
-  const openSvg =
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.5"> <path d="M4 8l16 0"></path> <path d="M4 16l16 0"></path </svg>'
-
-  const closeSvg =
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.5" > <path d="M18 6l-12 12"></path> <path d="M6 6l12 12"></path></svg>'
-
-  menuButton?.addEventListener("click", () => {
-    isMenuOpen = !isMenuOpen
-
-    // Disable scroll temporarily while interacting with the menu
-    isScrollDisabled = true
-
-    // Change menu visibility
-    navContent?.classList.toggle("hidden")
-    document.body.classList.toggle("overflow-hidden")
-
-    // Cambia el ícono del menú dinámicamente
-    menuButton.innerHTML = isMenuOpen ? closeSvg : openSvg
-
-    // Re-enable scroll
-    setTimeout(() => {
-      isScrollDisabled = false
-    }, 300)
-  })
-
   const links = navContent?.querySelectorAll("a")
+  const header = document.querySelector("header")
+  let linkClicked = false
 
   // Close the menu when clicking on a link
-  links?.forEach((link) => {
-    link.addEventListener("click", () => {
-      setTimeout(() => {
-        navContent?.classList.add("hidden")
-        document.body.classList.remove("overflow-hidden")
-        if (menuButton) {
-          menuButton.innerHTML = openSvg
-        }
-      }, 100)
-    })
-  })
+  if (links) {
+    links?.forEach((link) => {
+      link.addEventListener("click", () => {
+        linkClicked = true
+        header?.classList.add("hidden")
 
-  document.addEventListener("scroll", handleNavScroll)
+        setTimeout(() => {
+          navContent?.classList.add("hidden")
+          document.body.classList.remove("overflow-hidden")
+
+          if (menuButton) {
+            openMenu?.classList.remove("hidden")
+            closeMenu?.classList.add("hidden")
+          }
+        }, 100)
+      })
+    })
+  }
+
+  // Hide the header when a link is clicked
+  document.addEventListener("scroll", () => {
+    if (linkClicked) {
+      header?.classList.add("hidden")
+
+      setTimeout(() => {
+        linkClicked = false
+      }, 1000)
+
+      return
+    }
+
+    header?.classList.remove("hidden")
+  })
 </script>
