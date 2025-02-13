@@ -1,7 +1,7 @@
 ---
-import Header from "../components/Header.astro"
 import "@fontsource-variable/rubik"
 import "@fontsource-variable/fira-code"
+import Header from "@components/Header.astro"
 
 interface Props {
   title: string
@@ -16,11 +16,42 @@ const { title } = Astro.props
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Porfolio Oussama Atifi - Desarrollador Web FullStack"
+      content="Porfolio de Oussama Atifi, Desarrollador Web FullStack especializado en JavaScript, TypeScript, Angular, Node.js, PHP y Laravel. Descubre mis proyectos y habilidades"
     />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="keywords"
+      content="Desarrolador Web, FullStack, JavaScript, TypeScript, Angular, Node.js, PHP, Laravel, Portfolio"
+    />
+    <meta name="author" content="Oussama Atifi Elgattaoui" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph metadata -->
+    <meta
+      property="og:title"
+      content="Oussama Atifi - Desarrollador Web FullStack"
+    />
+    <meta
+      property="og:description"
+      content="Soy Oussama Atifi, desarrollador web FullStack. Explora mi portafolio y conoce un poco más sobre mí."
+    />
+    <meta property="og:image" content="https://oussamaati.dev/preview.webp" />
+    <meta property="og:url" content="https://oussamaati.dev" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Oussama Atifi - Desarrollador Web FullStack"
+    />
+    <meta
+      name="twitter:description"
+      content="Soy Oussama Atifi, desarrollador web FullStack. Explora mi portafolio y conoce un poco más sobre mí."
+    />
+    <meta name="twitter:image" content="https://oussamaati.dev/preview.webp" />
+
     <title>{title}</title>
   </head>
   <body class="py-4 lg:mx-0 max-w-screen bg-pattern">
