@@ -27,6 +27,7 @@ const { title, subtitle, image, tags, description, github, link } = Astro.props
         src={image}
         alt={`${title} image`}
         class="rounded-md group-hover:scale-105 transition"
+        loading="lazy"
       />
     </div>
     <div class="flex flex-col justify-between gap-2 sm:gap-0">
