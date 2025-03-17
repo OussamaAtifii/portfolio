@@ -126,8 +126,12 @@ export const EXPERIENCE = [
     company: "Magical Analytics",
     companyLink: "https://magical.es/",
     date: "March 2024 - Present",
-    description:
-      "I develop services to enhance the HubSpot interface, automate processes, and synchronize data between various CRMs and the HubSpot platform, boosting sales team productivity and efficiency. I also have experience in creating interactive websites with WordPress using Elementor and WooCommerce.",
+    description: [
+      "Developed Laravel-based services to transfer large data volumes from ERP systems to HubSpot, integrating HubSpot API to centralize and sync information.",
+      "Built custom REST APIs and HubSpot interfaces to visualize real-time entity relationships, using Laravel, JavaScript, and Tailwind CSS",
+      "Created and implemented automated HubSpot workflows using Node.js to simplify processes and improve efficiency.",
+      "Created dynamic, responsive WordPress websites to enhance clients' digital presence.",
+    ],
   },
 ]
 

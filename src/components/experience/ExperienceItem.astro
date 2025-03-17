@@ -6,7 +6,7 @@ interface Props {
   company: string
   companyLink: string
   date: string
-  description: string
+  description: string[]
 }
 
 const { title, company, companyLink, date, description } = Astro.props
@@ -40,9 +40,9 @@ const { title, company, companyLink, date, description } = Astro.props
       </div>
     </div>
     <div class="col-span-3">
-      <p class="text-base text-pretty font-normal text-gray-400">
-        {description}
-      </p>
+      <ul class="list-disc ml-4 text-base font-normal text-gray-400 space-y-2">
+        {description.map((item) => <li>{item}</li>)}
+      </ul>
     </div>
   </div>
 </li>
