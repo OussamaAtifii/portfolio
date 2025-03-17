@@ -70,7 +70,7 @@ export const TAGS = {
 export const PROJECTS = [
   {
     title: "Prodly",
-    subtitle: "Projects Manager",
+    subtitle: "Project Manager",
     description:
       "A simple drag and drop interface to manage projects and tasks in one place, with a clear view of your data to stay organized and track progress.",
     link: "https://prodly.oussamaati.dev",
