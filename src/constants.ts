@@ -3,6 +3,7 @@ import Express from "@icons/Express.astro"
 import LanguageCert from "@icons/LanguageCert.astro"
 import NestJS from "@icons/NestJS.astro"
 import NextJS from "@icons/NextJS.astro"
+import Ngrx from "@icons/Ngrx.astro"
 import NodeJS from "@icons/NodeJS.astro"
 import React from "@icons/React.astro"
 import Shadcn from "@icons/Shadcn.astro"
@@ -44,6 +45,10 @@ export const TAGS = {
     name: "Angular2",
     icon: AngularIcon,
   },
+  NGRX: {
+    name: "NgRx",
+    icon: Ngrx,
+  },
   SHADCN: {
     name: "Shadcn",
     icon: Shadcn,
@@ -64,6 +69,16 @@ export const TAGS = {
 
 export const PROJECTS = [
   {
+    title: "Prodly",
+    subtitle: "Projects Manager",
+    description:
+      "A simple drag and drop interface to manage projects and tasks in one place, with a clear view of your data to stay organized and track progress.",
+    link: "https://prodly.oussamaati.dev",
+    github: "https://github.com/OussamaAtifii/prodly",
+    image: "projects/prodly.webp",
+    tags: [TAGS.ANGULAR2, TAGS.NGRX, TAGS.TAILWIND, TAGS.NODEJS, TAGS.EXPRESS],
+  },
+  {
     title: "Moviees",
     subtitle: "Find new Movies",
     description:
@@ -72,16 +87,6 @@ export const PROJECTS = [
     github: "https://github.com/OussamaAtifii/moviees",
     image: "projects/moviees.webp",
     tags: [TAGS.ANGULAR2, TAGS.TAILWIND],
-  },
-  {
-    title: "BudgetBee",
-    subtitle: "Finance Tracker",
-    description:
-      "An app to manage your daily transactions, track your spending and set budget limits to stay on top of your finances.",
-    link: "https://budget-bee.oussamaati.dev",
-    github: "https://github.com/OussamaAtifii/budget-bee",
-    image: "projects/budget-bee.webp",
-    tags: [TAGS.NODEJS, TAGS.EXPRESS, TAGS.REACT, TAGS.TAILWIND, TAGS.SHADCN],
   },
   {
     title: "Memory Match",
@@ -93,16 +98,26 @@ export const PROJECTS = [
     image: "projects/memory-match.webp",
     tags: [TAGS.ANGULAR2, TAGS.TYPESCRIPT],
   },
-  {
-    title: "TecnoNexo",
-    subtitle: "Minimalist Tech Store",
-    description:
-      "Platform for browsing and purchasing tech components, featuring order management and an intuitive admin dashboard. Offers secure payments via Stripe.",
-    link: "https://tecnonexo.oussamaati.dev",
-    github: "https://github.com/OussamaAtifii/tecnonexo",
-    image: "projects/tecnonexo.webp",
-    tags: [TAGS.NEST, TAGS.REACT, TAGS.TAILWIND, TAGS.STRIPE],
-  },
+  // {
+  //   title: "BudgetBee",
+  //   subtitle: "Finance Tracker",
+  //   description:
+  //     "An app to manage your daily transactions, track your spending and set budget limits to stay on top of your finances.",
+  //   link: "https://budget-bee.oussamaati.dev",
+  //   github: "https://github.com/OussamaAtifii/budget-bee",
+  //   image: "projects/budget-bee.webp",
+  //   tags: [TAGS.NODEJS, TAGS.EXPRESS, TAGS.REACT, TAGS.TAILWIND, TAGS.SHADCN],
+  // },
+  // {
+  //   title: "TecnoNexo",
+  //   subtitle: "Minimalist Tech Store",
+  //   description:
+  //     "Platform for browsing and purchasing tech components, featuring order management and an intuitive admin dashboard. Offers secure payments via Stripe.",
+  //   link: "https://tecnonexo.oussamaati.dev",
+  //   github: "https://github.com/OussamaAtifii/tecnonexo",
+  //   image: "projects/tecnonexo.webp",
+  //   tags: [TAGS.NEST, TAGS.REACT, TAGS.TAILWIND, TAGS.STRIPE],
+  // },
 ]
 
 export const EXPERIENCE = [
