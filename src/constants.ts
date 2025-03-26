@@ -172,7 +172,7 @@ export const CERTIFICATIONS = [
   },
   {
     name: "B2 - LanguageCert International ESOL",
-    link: "https://www.languagecert.org/es/language-exams/english/languagecert-international-esol/b2-communicator-2281",
+    link: "certifications/b2-cert.pdf",
     date: "October 2024",
     description: "LanguageCert B2 Certification",
     tag: TAGS.LANGUAGE_CERT,
