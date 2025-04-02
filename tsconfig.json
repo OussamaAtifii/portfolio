@@ -7,7 +7,8 @@
       "@constants": ["./src/constants.ts"],
       "@components/*": ["./src/components/*"],
       "@mocks/*": ["./src/mocks/*"],
-      "@customTypes/*": ["./src/types/*"]
+      "@customTypes/*": ["./src/types/*"],
+      "@lib/*": ["./src/lib/*"],
     }
   }
 }
