@@ -6,6 +6,8 @@
       "@icons/*": ["./src/icons/*"],
       "@constants": ["./src/constants.ts"],
       "@components/*": ["./src/components/*"],
+      "@mocks/*": ["./src/mocks/*"],
+      "@customTypes/*": ["./src/types/*"]
     }
   }
 }
