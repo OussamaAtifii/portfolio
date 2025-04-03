@@ -1,15 +1,9 @@
 ---
+import type { Experience } from "@customTypes/experience"
 import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro"
 
-interface Props {
-  title: string
-  company: string
-  companyLink: string
-  date: string
-  description: string[]
-}
-
-const { title, company, companyLink, date, description } = Astro.props
+const props = Astro.props as Experience
+const { title, company, companyLink, date, description } = props
 ---
 
 <li class="ms-4">

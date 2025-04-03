@@ -1,14 +1,16 @@
 ---
 import BriefCaseIcon from "@icons/BriefCaseIcon.astro"
-import { EXPERIENCE } from "@constants"
 import ExperienceItem from "./ExperienceItem.astro"
 import Container from "@components/Container.astro"
+import { getExperience } from "@lib/experienceService"
+
+const experience = await getExperience()
 ---
 
 <Container title="Experience" id="experience" icon={BriefCaseIcon}>
   <ol
     class="relative border-s border-gray-200 dark:border-gray-700 space-y-10 animate-slidein300"
   >
-    {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
+    {experience.map((experience) => <ExperienceItem {...experience} />)}
   </ol>
 </Container>
