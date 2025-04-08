@@ -11,6 +11,7 @@ import StripeIcon from "@icons/StripeIcon.astro"
 import Tailwind from "@icons/Tailwind.astro"
 import TypeScript from "@icons/TypeScript.astro"
 import UdemyIcon from "@icons/UdemyIcon.astro"
+import WebSocketIcon from "@icons/WebSocketIcon.astro"
 
 export const TAGS = {
   NEXT: {
@@ -65,6 +66,10 @@ export const TAGS = {
     name: "Language Cert",
     icon: LanguageCert,
   },
+  WEBSOCKET: {
+    name: "WebSocket",
+    icon: WebSocketIcon,
+  },
 }
 
 export const PROJECTS = [
@@ -72,11 +77,18 @@ export const PROJECTS = [
     title: "Prodly",
     subtitle: "Project Manager",
     description:
-      "A simple drag and drop interface to manage projects and tasks in one place, with a clear view of your data to stay organized and track progress.",
+      "A project and task management tool featuring a clean drag-and-drop interface. It allows users to manage tasks, invite collaborators, and receive real-time updates via WebSocket events.",
     link: "https://prodly.oussamaati.dev",
     github: "https://github.com/OussamaAtifii/prodly",
     image: "projects/prodly.webp",
-    tags: [TAGS.ANGULAR2, TAGS.NGRX, TAGS.TAILWIND, TAGS.NODEJS, TAGS.EXPRESS],
+    tags: [
+      TAGS.ANGULAR2,
+      TAGS.NGRX,
+      TAGS.TAILWIND,
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.WEBSOCKET,
+    ],
   },
   {
     title: "Moviees",
