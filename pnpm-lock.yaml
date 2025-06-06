@@ -14,12 +14,6 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.3
         version: 5.1.3(astro@5.0.9(jiti@1.21.6)(rollup@4.24.0)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.13)
-      '@fontsource-variable/fira-code':
-        specifier: ^5.1.1
-        version: 5.1.1
-      '@fontsource-variable/rubik':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@fontsource-variable/space-grotesk':
         specifier: ^5.2.8
         version: 5.2.8
@@ -411,12 +405,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource-variable/fira-code@5.1.1':
-    resolution: {integrity: sha512-+X0eaJHfG/igcrVS2jvYCymFUFtcChUpk3obRXLt8ZPYIE+sfZqhtidCEaCgkCQxR6zJbYmvMd6M+rjrya6KyQ==}
-
-  '@fontsource-variable/rubik@5.1.0':
-    resolution: {integrity: sha512-gmh3xts3ARd0ktWW/VX+MVxhJr6TxHVeGLsQEaQXDVxvuNjn5WRucfKfXK3EVN2BcgRxUe1Fctv/v9zgEd0DUg==}
 
   '@fontsource-variable/space-grotesk@5.2.8':
     resolution: {integrity: sha512-ei9jNXzZVgBGEBVfHZqPe6F9ZxpPUG8kJYrtlLsivlWJZLCfrfSxcayjnMYAmslEGvvfjth7qybl7PNNqE8ZHw==}
@@ -2415,10 +2403,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.24.0':
     optional: true
-
-  '@fontsource-variable/fira-code@5.1.1': {}
-
-  '@fontsource-variable/rubik@5.1.0': {}
 
   '@fontsource-variable/space-grotesk@5.2.8': {}
 
