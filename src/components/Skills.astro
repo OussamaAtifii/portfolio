@@ -1,12 +1,12 @@
 ---
-import Keyboard from "@icons/Keyboard.astro"
-import Container from "./Container.astro"
+import Keyboard from "@icons/Keyboard.astro";
+import Container from "./Container.astro";
 import { getSkills } from "@lib/skillsService";
 
 const skills = await getSkills();
 ---
 
-<Container title="Skills" id="skills" icon={Keyboard}>
+<Container title="Habilidades" id="skills" icon={Keyboard}>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       skills.map((skill) => (
