@@ -1,23 +1,25 @@
 ---
-import TagBadge from "@components/badges/TagBadge.astro"
-import GithubIcon from "@icons/GithubIcon.astro"
-import LinkIcon from "@icons/LinkIcon.astro"
+import TagBadge from "@components/badges/TagBadge.astro";
+import Button from "@components/Button.astro";
+import Code from "@icons/Code.astro";
+import GithubIcon from "@icons/GithubIcon.astro";
+import LinkIcon from "@icons/LinkIcon.astro";
 
 interface Props {
-  title: string
-  subtitle: string
-  image: string
+  title: string;
+  subtitle: string;
+  image: string;
   tags: {
-    name: string
-    icon: any
-  }[]
-  description: string
-  github: string
-  link: string
-  index: number
+    name: string;
+    icon: any;
+  }[];
+  description: string;
+  github: string;
+  link: string;
+  index: number;
 }
 
-const { title, subtitle, image, tags, description, github, link } = Astro.props
+const { title, subtitle, image, tags, description, github, link } = Astro.props;
 ---
 
 <article class="rounded-md flex flex-col justify-between gap-6">
@@ -41,24 +43,8 @@ const { title, subtitle, image, tags, description, github, link } = Astro.props
         <p class="text-gray-400">{description}</p>
       </div>
       <div class="flex gap-2">
-        <a
-          class="flex gap-2 border rounded-md justify-center items-center px-3 py-1 hover:bg-gray-800"
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon class="size-4" />
-          Code
-        </a>
-        <a
-          class="flex gap-2 border rounded-md justify-center items-center px-3 py-1 hover:bg-gray-800"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkIcon class="size-4" />
-          Preview</a
-        >
+        <Button href={github} icon={Code} text="View Code" />
+        <Button href={link} icon={LinkIcon} text="Preview" />
       </div>
     </div>
   </div>
