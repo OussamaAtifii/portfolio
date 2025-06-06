@@ -1,17 +1,17 @@
-import AngularIcon from "@icons/AngularIcon.astro"
-import Express from "@icons/Express.astro"
-import LanguageCert from "@icons/LanguageCert.astro"
-import NestJS from "@icons/NestJS.astro"
-import NextJS from "@icons/NextJS.astro"
-import Ngrx from "@icons/Ngrx.astro"
-import NodeJS from "@icons/NodeJS.astro"
-import React from "@icons/React.astro"
-import Shadcn from "@icons/Shadcn.astro"
-import StripeIcon from "@icons/StripeIcon.astro"
-import Tailwind from "@icons/Tailwind.astro"
-import TypeScript from "@icons/TypeScript.astro"
-import UdemyIcon from "@icons/UdemyIcon.astro"
-import WebSocketIcon from "@icons/WebSocketIcon.astro"
+import AngularIcon from "@icons/AngularIcon.astro";
+import Express from "@icons/Express.astro";
+import LanguageCert from "@icons/LanguageCert.astro";
+import NestJS from "@icons/NestJS.astro";
+import NextJS from "@icons/NextJS.astro";
+import Ngrx from "@icons/Ngrx.astro";
+import NodeJS from "@icons/NodeJS.astro";
+import React from "@icons/React.astro";
+import Shadcn from "@icons/Shadcn.astro";
+import StripeIcon from "@icons/StripeIcon.astro";
+import Tailwind from "@icons/Tailwind.astro";
+import TypeScript from "@icons/TypeScript.astro";
+import UdemyIcon from "@icons/UdemyIcon.astro";
+import WebSocketIcon from "@icons/WebSocketIcon.astro";
 
 export const TAGS = {
   NEXT: {
@@ -70,14 +70,14 @@ export const TAGS = {
     name: "WebSocket",
     icon: WebSocketIcon,
   },
-}
+};
 
 export const PROJECTS = [
   {
     title: "Prodly",
-    subtitle: "Project Manager",
+    subtitle: "Gestor de Proyectos",
     description:
-      "A project and task management tool featuring a clean drag-and-drop interface. It allows users to manage tasks, invite collaborators, and receive real-time updates via WebSocket events.",
+      "Herramienta de gestión de proyectos mediante drag&drop. Permite a los usuarios gestionar tareas, invitar colaboradores y recibir actualizaciones en tiempo real mediante eventos WebSocket.",
     link: "https://prodly.oussamaati.dev",
     github: "https://github.com/OussamaAtifii/prodly",
     image: "projects/prodly.webp",
@@ -92,9 +92,9 @@ export const PROJECTS = [
   },
   {
     title: "Moviees",
-    subtitle: "Find new Movies",
+    subtitle: "Descubre Nuevas Películas",
     description:
-      "A platform to explore movies, search for specific titles, access detailed information, view ratings and summaries, and discover personalized recommendations",
+      "Plataforma para explorar películas, buscar títulos específicos, acceder a información detallada y resúmenes.",
     link: "https://moviees.oussamaati.dev",
     github: "https://github.com/OussamaAtifii/moviees",
     image: "projects/moviees.webp",
@@ -102,35 +102,15 @@ export const PROJECTS = [
   },
   {
     title: "Memory Match",
-    subtitle: "Test Your Memory",
+    subtitle: "Juego de Memoria",
     description:
-      "Simple game where players flip over cards to find matching pairs. The goal is to remember the location of cards and match them all in the shortest time possible.",
+      "Juego de memoria donde debes encontrar todos los pares de cartas en la menor cantidad de intentos posible.",
     link: "https://memory-match.oussamaati.dev",
     github: "https://github.com/OussamaAtifii/memory-match",
     image: "projects/memory-match.webp",
     tags: [TAGS.ANGULAR2, TAGS.TYPESCRIPT],
   },
-  // {
-  //   title: "BudgetBee",
-  //   subtitle: "Finance Tracker",
-  //   description:
-  //     "An app to manage your daily transactions, track your spending and set budget limits to stay on top of your finances.",
-  //   link: "https://budget-bee.oussamaati.dev",
-  //   github: "https://github.com/OussamaAtifii/budget-bee",
-  //   image: "projects/budget-bee.webp",
-  //   tags: [TAGS.NODEJS, TAGS.EXPRESS, TAGS.REACT, TAGS.TAILWIND, TAGS.SHADCN],
-  // },
-  // {
-  //   title: "TecnoNexo",
-  //   subtitle: "Minimalist Tech Store",
-  //   description:
-  //     "Platform for browsing and purchasing tech components, featuring order management and an intuitive admin dashboard. Offers secure payments via Stripe.",
-  //   link: "https://tecnonexo.oussamaati.dev",
-  //   github: "https://github.com/OussamaAtifii/tecnonexo",
-  //   image: "projects/tecnonexo.webp",
-  //   tags: [TAGS.NEST, TAGS.REACT, TAGS.TAILWIND, TAGS.STRIPE],
-  // },
-]
+];
 
 export const EXPERIENCE = [
   {
@@ -145,7 +125,7 @@ export const EXPERIENCE = [
       "Created dynamic, responsive WordPress websites to enhance clients' digital presence.",
     ],
   },
-]
+];
 
 export const SKILLS = [
   {
@@ -164,7 +144,7 @@ export const SKILLS = [
     name: "Others",
     items: ["Git", "Github", "Linux", "Docker", "RESTful APIs"],
   },
-]
+];
 
 export const CERTIFICATIONS = [
   {
@@ -189,4 +169,4 @@ export const CERTIFICATIONS = [
     description: "LanguageCert B2 Certification",
     tag: TAGS.LANGUAGE_CERT,
   },
-]
+];
