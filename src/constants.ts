@@ -150,7 +150,7 @@ export const CERTIFICATIONS = [
   {
     name: "Angular - The Complete Guide",
     link: "https://www.udemy.com/course/the-complete-guide-to-angular-2",
-    date: "December 2024",
+    date: "Diciembre 2024",
     description:
       "Angular Basics, Signals, RxJS, NgRx, Directives, Pipes, Routing, Karma",
     tag: TAGS.UDEMY,
@@ -158,14 +158,14 @@ export const CERTIFICATIONS = [
   {
     name: "Docker & Kubernetes: The Practical Guide",
     link: "https://www.udemy.com/course/docker-kubernetes-the-practical-guide",
-    date: "January 2025",
+    date: "Enero 2025",
     description: "Containers, Images, Kubernetes, Docker Compose, Deployment",
     tag: TAGS.UDEMY,
   },
   {
     name: "B2 - LanguageCert International ESOL",
     link: "certifications/b2-cert.pdf",
-    date: "October 2024",
+    date: "Octubre 2024",
     description: "LanguageCert B2 Certification",
     tag: TAGS.LANGUAGE_CERT,
   },
