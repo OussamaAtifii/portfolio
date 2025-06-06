@@ -1,22 +1,22 @@
 ---
-import type { Experience } from "@customTypes/experience"
-import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro"
+import type { Experience } from "@customTypes/experience";
+import ArrowUpRightIcon from "@icons/ArrowUpRightIcon.astro";
 
-const props = Astro.props as Experience
-const { title, company, companyLink, date, description } = props
+const props = Astro.props as Experience;
+const { title, company, companyLink, date, description } = props;
 ---
 
 <li class="ms-4">
   <div
-    class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white bg-dodger-blue-600"
+    class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border-2 border-white bg-dodger-blue-600"
   >
   </div>
   <div class="space-y-4">
-    <div class="col-span-2 flex flex-col gap-4">
-      <time class="text-sm leading-none text-gray-400 mt-1.5">{date}</time>
+    <div class="flex flex-col gap-2">
+      <time class="text-sm leading-none text-gray-400 mt-1">{date}</time>
       <div>
         <h3
-          class="text-3xl font-semibold text-dodger-blue-700 text-nowrap sm:text-wrap leading-none"
+          class="text-2xl font-semibold text-dodger-blue-700 tracking-tight leading-snug"
         >
           {title}
         </h3>
@@ -24,19 +24,20 @@ const { title, company, companyLink, date, description } = props
           href={companyLink}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-medium text-gray-400 hover:text-white flex items-center group transition duration-300 hover:cursor-pointer"
+          class="inline-flex items-center gap-1 font-medium text-gray-400 hover:text-dodger-blue-400 transition hover:underline"
         >
           {company}
           <ArrowUpRightIcon
-            class="size-4 group-hover:translate-x-[2px] transition"
+            class="size-4 transition-transform duration-200 group-hover:translate-x-[2px]"
           />
         </a>
       </div>
     </div>
-    <div class="col-span-3">
-      <ul class="list-disc ml-4 text-base font-normal text-gray-400 space-y-2">
-        {description.map((item) => <li>{item}</li>)}
-      </ul>
-    </div>
+
+    <ul
+      class="list-disc pl-5 text-base font-normal text-gray-400 leading-relaxed space-y-2"
+    >
+      {description.map((item) => <li>{item}</li>)}
+    </ul>
   </div>
 </li>

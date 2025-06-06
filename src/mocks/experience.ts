@@ -1,16 +1,17 @@
-import type { Experience } from "@customTypes/experience"
+import type { Experience } from "@customTypes/experience";
 
 export const experience: Experience[] = [
   {
-    title: "FullStack Developer",
+    title: "Desarrollador FullStack",
     company: "Magical Analytics",
     companyLink: "https://magical.es/",
-    date: "March 2024 - Present",
+    date: "Junio 2024 - Actualidad",
     description: [
-      "Developed Laravel-based services to transfer large data volumes from ERP systems to HubSpot, integrating HubSpot API to centralize and sync information.",
-      "Built custom REST APIs and HubSpot interfaces to visualize real-time entity relationships, using Laravel, JavaScript, and Tailwind CSS",
-      "Created and implemented automated HubSpot workflows using Node.js to simplify processes and improve efficiency.",
-      "Created dynamic, responsive WordPress websites to enhance clients' digital presence.",
+      "Desarrollo y mantenimiento de servicios backend con Laravel y MySQL para automatizar y gestionar datos, logrando mejoras en la velocidad de los procesos internos de los clientes y reduciendo errores manuales.",
+      "Implementación de APIs REST y desarrollo de paneles personalizados para la presentación de datos en tiempo real, incorporando estructuras modulares y adaptables.",
+      "Desarrollo de workflows automatizados en HubSpot mediante Node.js, integrando lógica personalizada y gestionando procesos dentro del ecosistema CRM.",
+      "Desarrollo y maquetación de páginas web dinámicas con WordPress, Elementor y WooCommerce.",
+      "Creación de plugins personalizados para WordPress, adaptando funcionalidades específicas a las necesidades de los clientes.",
     ],
   },
-]
+];
