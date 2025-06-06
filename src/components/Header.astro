@@ -1,9 +1,9 @@
 ---
-import Close from "@icons/Close.astro"
-import GithubIcon from "@icons/GithubIcon.astro"
-import LinkedIn from "@icons/LinkedIn.astro"
-import Mail from "@icons/Mail.astro"
-import Menu from "@icons/Menu.astro"
+import Close from "@icons/Close.astro";
+import GithubIcon from "@icons/GithubIcon.astro";
+import LinkedIn from "@icons/LinkedIn.astro";
+import Mail from "@icons/Mail.astro";
+import Menu from "@icons/Menu.astro";
 ---
 
 <header
@@ -46,27 +46,27 @@ import Menu from "@icons/Menu.astro"
         <a
           href="#about"
           class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
-          >About</a
+          >Sobre mí</a
         >
         <a
           href="#experience"
           class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
-          >Experience</a
+          >Experiencia</a
         >
         <a
           href="#projects"
           class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
-          >Projects</a
-        >
-        <a
-          href="#certifications"
-          class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
-          >Certifications</a
+          >Proyectos</a
         >
         <a
           href="#skills"
           class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
-          >Skills</a
+          >Habilidades</a
+        >
+        <a
+          href="#certifications"
+          class="p-2 text-sm text-white w-full hover:bg-gray-800 bg-gray-800 sm:bg-transparent rounded-md transition-colors duration-300"
+          >Certificaciones</a
         >
       </div>
 
@@ -102,60 +102,60 @@ import Menu from "@icons/Menu.astro"
 </header>
 
 <script>
-  const menuButton = document.getElementById("menu-button")
-  const navContent = document.getElementById("nav-content")
+  const menuButton = document.getElementById("menu-button");
+  const navContent = document.getElementById("nav-content");
 
-  const openMenu = document.querySelector(".open-menu")
-  const closeMenu = document.querySelector(".close-menu")
+  const openMenu = document.querySelector(".open-menu");
+  const closeMenu = document.querySelector(".close-menu");
 
   if (menuButton) {
     menuButton.addEventListener("click", () => {
       // Change menu visibility
-      navContent?.classList.toggle("hidden")
-      document.body.classList.toggle("overflow-hidden")
+      navContent?.classList.toggle("hidden");
+      document.body.classList.toggle("overflow-hidden");
 
       // Change menu button icon
-      openMenu?.classList.toggle("hidden")
-      closeMenu?.classList.toggle("hidden")
-    })
+      openMenu?.classList.toggle("hidden");
+      closeMenu?.classList.toggle("hidden");
+    });
   }
 
-  const links = navContent?.querySelectorAll("a")
-  const header = document.querySelector("header")
-  let linkClicked = false
+  const links = navContent?.querySelectorAll("a");
+  const header = document.querySelector("header");
+  let linkClicked = false;
 
   // Close the menu when clicking on a link
   if (links) {
     links?.forEach((link) => {
       link.addEventListener("click", () => {
-        linkClicked = true
-        header?.classList.add("hidden")
+        linkClicked = true;
+        header?.classList.add("hidden");
 
         setTimeout(() => {
-          navContent?.classList.add("hidden")
-          document.body.classList.remove("overflow-hidden")
+          navContent?.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
 
           if (menuButton) {
-            openMenu?.classList.remove("hidden")
-            closeMenu?.classList.add("hidden")
+            openMenu?.classList.remove("hidden");
+            closeMenu?.classList.add("hidden");
           }
-        }, 100)
-      })
-    })
+        }, 100);
+      });
+    });
   }
 
   // Hide the header when a link is clicked
   document.addEventListener("scroll", () => {
     if (linkClicked) {
-      header?.classList.add("hidden")
+      header?.classList.add("hidden");
 
       setTimeout(() => {
-        linkClicked = false
-      }, 1000)
+        linkClicked = false;
+      }, 1000);
 
-      return
+      return;
     }
 
-    header?.classList.remove("hidden")
-  })
+    header?.classList.remove("hidden");
+  });
 </script>
