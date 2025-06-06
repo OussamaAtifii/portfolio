@@ -20,6 +20,12 @@ importers:
       '@fontsource-variable/rubik':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource-variable/space-grotesk':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource-variable/work-sans':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0
@@ -411,6 +417,12 @@ packages:
 
   '@fontsource-variable/rubik@5.1.0':
     resolution: {integrity: sha512-gmh3xts3ARd0ktWW/VX+MVxhJr6TxHVeGLsQEaQXDVxvuNjn5WRucfKfXK3EVN2BcgRxUe1Fctv/v9zgEd0DUg==}
+
+  '@fontsource-variable/space-grotesk@5.2.8':
+    resolution: {integrity: sha512-ei9jNXzZVgBGEBVfHZqPe6F9ZxpPUG8kJYrtlLsivlWJZLCfrfSxcayjnMYAmslEGvvfjth7qybl7PNNqE8ZHw==}
+
+  '@fontsource-variable/work-sans@5.2.5':
+    resolution: {integrity: sha512-zvoUtTMsk0c0Iygz8DAWrSdVgQvcIMxRtLS7a1H3tFuUHIOAN0NHRrwONyeebDuzXrgAUmSrDOAxOz5D+pn6nw==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2407,6 +2419,10 @@ snapshots:
   '@fontsource-variable/fira-code@5.1.1': {}
 
   '@fontsource-variable/rubik@5.1.0': {}
+
+  '@fontsource-variable/space-grotesk@5.2.8': {}
+
+  '@fontsource-variable/work-sans@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
