@@ -1,10 +1,10 @@
 ---
-import Certificate from "@icons/Certificate.astro"
-import { CERTIFICATIONS } from "@constants"
-import Container from "./Container.astro"
+import Certificate from "@icons/Certificate.astro";
+import { CERTIFICATIONS } from "@constants";
+import Container from "./Container.astro";
 ---
 
-<Container title="Certifications" id="certifications" icon={Certificate}>
+<Container title="Certificaciones" id="certifications" icon={Certificate}>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       CERTIFICATIONS.map(({ link, tag, name, description, date }) => (
