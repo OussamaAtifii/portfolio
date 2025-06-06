@@ -1,25 +1,32 @@
 ---
-import OpenToWorkBadge from "@components/badges/OpenToWorkBadge.astro"
+import OpenToWorkBadge from "@components/badges/OpenToWorkBadge.astro";
+import LinkedIn from "@icons/LinkedIn.astro";
+import Mail from "@icons/Mail.astro";
+import Button from "./Button.astro";
 ---
 
-<section
-  class="text-pretty text-lg mt-8 [&>p]:mb-2 animate-slidein200"
-  id="about"
->
+<section class="text-pretty text-lg mt-8 animate-slidein200" id="about">
   <div class="inline-flex gap-4 items-center mb-4 flex-wrap">
     <h1 class="text-4xl font-medium">Oussama Atifi</h1>
     <OpenToWorkBadge />
   </div>
 
-  <p>
-    +1 year of experience as a <span class="shine-text"
-      >FullStack Developer</span
-    > from Almería, Spain 🇪🇸. I am passionate about technology and <span
-      class="shine-text">web development</span
-    >. I love discovering and learning by experimenting with <span
-      class="shine-text">new technologies</span
-    >.
+  <p class="text-xl [&>strong]:font-medium [&>strong]:text-dodger-blue-600">
+    Más de 1 año de experiencia como <strong>desarrollador web</strong> en Almería,
+    España 🇪🇸. Especializado en la <strong>automatización</strong> de procesos y
+    la creación de <strong>sitios web</strong> funcionales y eficaces.
   </p>
 
-  <p>I am currently specializing in Angular 🅰️.</p>
+  <div class="flex gap-4 items-center mt-4">
+    <Button
+      href="mailto:oussamaati03@gmail.com"
+      icon={Mail}
+      text="Contáctame"
+    />
+    <Button
+      href="https://www.linkedin.com/in/oussama-atifi/"
+      icon={LinkedIn}
+      text="LinkedIn"
+    />
+  </div>
 </section>
